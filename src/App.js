@@ -44,6 +44,7 @@ class App extends React.Component {
                 artist={item.artist}
                 genre={item.genre}
                 album={item.album}
+                songs={item.songs}
               ></Card>
             );
           })}
@@ -57,9 +58,15 @@ export default App;
 function Card(props) {
   return (
     <>
-      <h3>{props.artist}</h3>
+      <h3>Artist: {props.artist}</h3>
       <h4>Genre: {props.genre}</h4>
       <h4>Album: {props.album}</h4>
+      <h4>Favourite Songs:</h4>
+      <ul>
+        {props.songs.map((song) => {
+          return <li>{song}</li>;
+        })}
+      </ul>
       <hr></hr>
     </>
   );
