@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Components/card";
 class App extends React.Component {
   state = {
     music: [
@@ -55,20 +56,3 @@ class App extends React.Component {
   }
 }
 export default App;
-
-function Card(props) {
-  return (
-    <>
-      <h3>Artist: {props.artist}</h3>
-      <h4>Genre: {props.genre}</h4>
-      <h4>Album: {props.album}</h4>
-      <h4>Favourite Songs:</h4>
-      <ul>
-        {props.songs.map((song, idx) => {
-          return <li key={idx}>{song}</li>;
-        })}
-      </ul>
-      <hr></hr>
-    </>
-  );
-}
