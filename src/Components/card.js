@@ -4,6 +4,12 @@ class Card extends React.Component {
   state = {
     like: true,
   };
+
+  toggleLike = () => {
+    this.setState((prevState) => ({
+      like: !prevState.like,
+    }));
+  };
   render() {
     return (
       <>
@@ -16,8 +22,8 @@ class Card extends React.Component {
             return <li key={idx}>{song}</li>;
           })}
         </ul>
-        <button onClick={this.props.onClick}>Like</button>
-        <h4>{this.props.likeStatus}</h4>
+        <button onClick={() => this.toggleLike}>Like</button>
+        <h4>{String(this.state.like)}</h4>
         <hr></hr>
       </>
     );
