@@ -1,7 +1,7 @@
 import React from "react";
 class App extends React.Component {
-  render() {
-    const music = [
+  state = {
+    music: [
       {
         artist: "J.Cole",
         genre: "Rap",
@@ -30,17 +30,18 @@ class App extends React.Component {
         coverArt: "",
         songs: ["To Zion", "Nothing Even Matters", "Everything is Everything"],
       },
-    ];
-    const hold = [];
-
+    ],
+  };
+  render() {
     return (
       <>
         <h1>Hello World!</h1>
 
         <div>
-          {music.map((item) => {
+          {this.state.music.map((item, idx) => {
             return (
               <Card
+                key={idx}
                 artist={item.artist}
                 genre={item.genre}
                 album={item.album}
@@ -63,8 +64,8 @@ function Card(props) {
       <h4>Album: {props.album}</h4>
       <h4>Favourite Songs:</h4>
       <ul>
-        {props.songs.map((song) => {
-          return <li>{song}</li>;
+        {props.songs.map((song, idx) => {
+          return <li key={idx}>{song}</li>;
         })}
       </ul>
       <hr></hr>
