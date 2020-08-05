@@ -2,13 +2,16 @@ import React from "react";
 
 class Card extends React.Component {
   state = {
-    like: true,
+    like: false,
   };
 
-  toggleLike = () => {
+  toggleLike = (event) => {
+    event.stopPropagation();
+
     this.setState((prevState) => ({
       like: !prevState.like,
     }));
+    console.log(this.state.like);
   };
   render() {
     return (
@@ -22,7 +25,7 @@ class Card extends React.Component {
             return <li key={idx}>{song}</li>;
           })}
         </ul>
-        <button onClick={() => this.toggleLike}>Like</button>
+        <button onClick={this.toggleLike}>Like</button>
         <h4>{String(this.state.like)}</h4>
         <hr></hr>
       </>
