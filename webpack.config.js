@@ -8,6 +8,7 @@ module.exports = {
     // instructions for compiling the code
     path: path.resolve("dist"), // the file where the compiled code should go
     filename: "bundle.js", // the file name of the compiled code
+    publicPath: "/",
   },
   devtool: "source-maps", // a tool to find errors in the compiled code, but show them against the source code for easier debugging
   module: {
@@ -29,6 +30,7 @@ module.exports = {
     open: true, // open the app/project in the browser when the server starts
     port: 8000, // use this port for the server
     watchContentBase: true, // watch for changes to static files
+    historyApiFallback: true,
   },
   plugins: [
     // plugins we are using

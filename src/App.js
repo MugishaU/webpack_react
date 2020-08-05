@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route, withRouter } from "react-router-dom";
 import AlbumCard from "./Components/AlbumCard";
 class App extends React.Component {
   state = {
@@ -36,7 +37,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <h1>Hello World!</h1>
+        <Switch>
+          <Route exact path="/" render={() => <h1 id="welcome">Welcome</h1>} />
+          <Route path="/albums" render={() => <h1 id="album">Albums!</h1>} />
+          <Route render={() => <h1 id="notfound">Page Not Found!</h1>} />
+        </Switch>
 
         <div>
           {this.state.music.map((item, idx) => {
@@ -55,4 +60,4 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+export default withRouter(App);
