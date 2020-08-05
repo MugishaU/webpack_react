@@ -8,8 +8,8 @@ class App extends React.Component {
     return (
       <>
         <ExampleHooks id={"3Y7RZ31TRPVadSFVy1o8os"} />
-        <ExampleHooks id={"4ULO7IGI3M2bo0Ap7B9h8a"} />
-
+        <ExampleHooks id={"2Mu5NfyYm8n5iTomuKAEHl"} />
+        <ExampleHooks id={"3wcj11K77LjEY1PkEazffa"} />
         <Switch>
           <Route
             exact
@@ -42,7 +42,7 @@ function ExampleHooks(props) {
           <li key={genre}>{genre}</li>
         ))}
       </ul>
-      <img src={artist.images[0].url}></img>
+      <img src={artist.images[2].url}></img>
     </div>
   ) : null;
 }

@@ -7,7 +7,7 @@ import { SpotifyApiContext } from "react-spotify-api";
 ReactDOM.render(
   <SpotifyApiContext.Provider
     value={
-      "BQBL-1g7aFBqRqWakiV87PfB4NN7Tp0uRbwrGOLpmgx6b3TckdZk5HCv9iLrOxs3WHFLoYCTKxgYHWuqPNqK0bi1eQCfqWdADwOP_OtW2kH3GDGHjqeojxnPCGleqg3qY84_v3g0gpjF2uI"
+      "BQAl6aP9Lwit80mOIUauc_fj19z2FqltxrGMRV2rlrSiK9LSXT4c3zpgy1A_Wl7XA6Dl-ahx8ZxysFUAJdIl6a-s4eoDNehWidcW4r1X6wiRqHuLJkd6DzjP21qtogp_hnvuLJCe7Q_1n_Y"
     }
   >
     <BrowserRouter>
