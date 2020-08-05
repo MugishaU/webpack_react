@@ -6,7 +6,16 @@ class App extends React.Component {
     return (
       <>
         <Switch>
-          <Route exact path="/" render={() => <h1 id="welcome">Welcome</h1>} />
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <>
+                <h1 id="welcome">Welcome</h1>
+                <h3>go to /albums</h3>
+              </>
+            )}
+          />
           <Route path="/albums" component={AlbumPage} />
           <Route render={() => <h1 id="notfound">Page Not Found!</h1>} />
         </Switch>
