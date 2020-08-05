@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./Components/card";
+import AlbumCard from "./Components/AlbumCard";
 class App extends React.Component {
   state = {
     music: [
@@ -41,13 +41,13 @@ class App extends React.Component {
         <div>
           {this.state.music.map((item, idx) => {
             return (
-              <Card
+              <AlbumCard
                 key={idx}
                 artist={item.artist}
                 genre={item.genre}
                 album={item.album}
                 songs={item.songs}
-              ></Card>
+              />
             );
           })}
         </div>

@@ -1,6 +1,7 @@
 import React from "react";
+import LikeButton from "./LikeButton";
 
-class Card extends React.Component {
+class AlbumCard extends React.Component {
   state = {
     like: false,
     fill: "fas fa-heart fa-2x",
@@ -28,14 +29,10 @@ class Card extends React.Component {
           })}
         </ul>
 
-        <i
-          style={{ cursor: "pointer", color: "darkgreen" }}
-          onClick={this.toggleLike}
-          className={this.state.like ? this.state.fill : this.state.empty}
-        ></i>
+        <LikeButton />
         <hr></hr>
       </>
     );
   }
 }
-export default Card;
+export default AlbumCard;
