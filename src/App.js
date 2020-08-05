@@ -37,6 +37,8 @@ function ExampleHooks(props) {
   return artist ? (
     <div>
       <h1>{artist.name}</h1>
+      <h2>Followers: {artist.followers.total}</h2>
+      <h3>Genres</h3>
       <ul>
         {artist.genres.map((genre) => (
           <li key={genre}>{genre}</li>
